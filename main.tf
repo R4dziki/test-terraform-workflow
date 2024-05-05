@@ -6,7 +6,7 @@ terraform {
 
 
 resource "local_file" "hello" {
- filename = "hello.txt"
- content = "Hello world"
+ content = "print('${var.message}')"
+ filename = "${var.file_path}"
  }
 
